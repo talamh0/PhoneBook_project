@@ -6,27 +6,27 @@ class PhoneBookGUI:
         self.root = root
         self.root.title("PhoneBook")
         self.root.geometry("450x500")
-        self.root.configure(bg="#FAE3E3")  # وردي فاتح
+        self.root.configure(bg="#FAE3E3")  
 
         self.contacts = {}
 
-        # 🔹 العنوان
+    
         title_label = tk.Label(root, text="PhoneBook", font=("Arial", 18, "bold"), bg="#FAE3E3", fg="#333")
         title_label.pack(pady=10)
 
-        # 🔹 إطار إدخال البيانات
+    
         input_frame = tk.Frame(root, bg="#FFFFFF", padx=10, pady=10, relief="ridge", bd=2)
         input_frame.pack(pady=5, padx=10, fill="both")
 
         tk.Label(input_frame, text="Name:", font=("Arial", 12), bg="#FFFFFF").grid(row=0, column=0, sticky="w", padx=5, pady=3)
-        self.name_entry = tk.Entry(input_frame, width=30, font=("Arial", 12), bg="#E3F2FD")  # أزرق فاتح
+        self.name_entry = tk.Entry(input_frame, width=30, font=("Arial", 12), bg="#E3F2FD") 
         self.name_entry.grid(row=0, column=1, padx=5, pady=3)
 
         tk.Label(input_frame, text="Phone:", font=("Arial", 12), bg="#FFFFFF").grid(row=1, column=0, sticky="w", padx=5, pady=3)
-        self.phone_entry = tk.Entry(input_frame, width=30, font=("Arial", 12), bg="#E3F2FD")  # أزرق فاتح
+        self.phone_entry = tk.Entry(input_frame, width=30, font=("Arial", 12), bg="#E3F2FD") 
         self.phone_entry.grid(row=1, column=1, padx=5, pady=3)
 
-        # 🔹 إطار الأزرار
+
         button_frame = tk.Frame(root, bg="#FAE3E3")
         button_frame.pack(pady=5)
 
@@ -42,7 +42,7 @@ class PhoneBookGUI:
         show_button = tk.Button(button_frame, text="Show All Contacts", font=("Arial", 12), bg="#FF8A80", fg="black", width=15, command=self.show_contacts)
         show_button.grid(row=1, column=1, padx=5, pady=5)
 
-        # 🔹 منطقة عرض النتائج (جهات الاتصال)
+     
         result_frame = tk.Frame(root, bg="#FFFFFF", padx=10, pady=5, relief="ridge", bd=2)
         result_frame.pack(pady=5, padx=10, fill="both")
 
@@ -51,7 +51,7 @@ class PhoneBookGUI:
 
         self.result_text = tk.Text(result_frame, width=50, height=8, font=("Arial", 12), bg="#FFF5E1", fg="black", relief="ridge", bd=2)  # وردي بيج فاتح
         self.result_text.pack()
-        self.result_text.config(state="disabled")  # منع التعديل
+        self.result_text.config(state="disabled")  
 
     def add_contact(self):
         name = self.name_entry.get().strip()
@@ -96,7 +96,7 @@ class PhoneBookGUI:
         self.name_entry.delete(0, tk.END)
         self.phone_entry.delete(0, tk.END)
 
-# تشغيل التطبيق
+
 root = tk.Tk()
 app = PhoneBookGUI(root)
 root.mainloop()
