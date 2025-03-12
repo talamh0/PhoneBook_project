@@ -1,6 +1,6 @@
 # 📞 PhoneBook Project
 
-A modern **PhoneBook Application** built with **Java** and **Python (Tkinter)** for managing contacts efficiently. It allows users to **add, search, edit, and delete** contacts with a visually appealing UI.
+A **PhoneBook Application** built with **Java** and **Python (Tkinter)** for managing contacts efficiently. It allows users to **add, search, edit, and delete** contacts with a visually appealing UI.
 
 ---
 
